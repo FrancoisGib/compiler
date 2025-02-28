@@ -1,10 +1,7 @@
-use std::{fs::File, io::Read};
-
 mod tokenizer;
+mod parser;
 
-// use std::{fs::File, io::Read};
-
-// fn parse_token(mut str: String) {}
+use std::{fs::File, io::Read};
 
 fn main() {
     let mut file = match File::open("main.c") {

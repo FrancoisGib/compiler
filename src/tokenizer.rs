@@ -7,13 +7,12 @@ pub enum Token {
     Identifier(String),
     Operator(char),
     Number(i32),
-    StringLitteral(String),
+    StringLiteral(String),
     Type(String, bool),
     OpenBracket,
     CloseBracket,
     OpenParenthesis,
     CloseParenthesis,
-    Return,
     Semicolon,
     LineEnd,
 }
@@ -77,7 +76,7 @@ impl<'a> Tokenizer<'a> {
         if self.current_char.is_none() {
             None
         } else {
-            self.skip(Token::StringLitteral(str))
+            self.skip(Token::StringLiteral(str))
         }
     }
 
